@@ -18,7 +18,7 @@ function Login() {
         try {
             const loginUser = {email, password};
             const loginRes = await Axios.post(
-                'http://localHost:5000/users/login',
+                'https://sl--backend.herokuapp.com/users/login',
                 loginUser
             );
             

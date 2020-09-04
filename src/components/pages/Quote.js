@@ -14,7 +14,7 @@ function Quote(props) {
             setSymbol(symbol);
 
             let stockRes = await Axios.get(
-                `http://localhost:5000/quote/${symbol}`,
+                `https://sl--backend.herokuapp.com/quote/${symbol}`,
                 null,
                 null
             );
@@ -38,7 +38,7 @@ function Quote(props) {
         try {
 
             let stockRes = await Axios.get(
-                `http://localhost:5000/quote/${symbol}`,
+                `https://sl--backend.herokuapp.com/quote/${symbol}`,
                 null,
                 null
             );

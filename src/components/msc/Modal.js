@@ -17,7 +17,7 @@ function Modal() {
             const body = {name: listName};
             
             await Axios.post(
-                'http://localhost:5000/watchlist/',
+                'https://sl--backend.herokuapp.com/watchlist/',
                 body,
                 {headers: {"x-auth-token": localStorage.getItem('auth-token')}}
             );

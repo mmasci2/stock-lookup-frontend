@@ -21,12 +21,12 @@ function Register() {
         try {
             const newUser = {email, password, passwordCheck, displayName};
             await Axios.post(
-                'http://localHost:5000/users/register',
+                'https://sl--backend.herokuapp.com/users/register',
                 newUser
             );
             
             const loginRes = await Axios.post(
-                'http://localHost:5000/users/login',
+                'https://sl--backend.herokuapp.com/users/login',
                 {email, password}
             );
             

@@ -15,7 +15,7 @@ function Watchlist() {
         try {
 
             const resWatchlists = await Axios.get(
-                'http://localhost:5000/watchlist/all',
+                'https://sl--backend.herokuapp.com/watchlist/all',
                 {headers: {'x-auth-token': localStorage.getItem('auth-token')}}
             );
 
@@ -41,7 +41,7 @@ function Watchlist() {
         try {
             
             await Axios.delete(
-                `http://localhost:5000/watchlist/${wl._id}`,
+                `https://sl--backend.herokuapp.com/watchlist/${wl._id}`,
                 {headers: {'x-auth-token': localStorage.getItem('auth-token')}}
             );
 
@@ -57,7 +57,7 @@ function Watchlist() {
             const form = formEl.current;
             const body = {symbol: form['symbol'].value};
             await Axios.post(
-                `http://localhost:5000/watchlist/addSymbol/${wl._id}`,
+                `https://sl--backend.herokuapp.com/watchlist/addSymbol/${wl._id}`,
                 body,
                 {headers: {'x-auth-token': localStorage.getItem('auth-token')}}
             );
@@ -74,7 +74,7 @@ function Watchlist() {
         try {
             const body = {symbol};
             await Axios.post(
-                `http://localhost:5000/watchlist/removeSymbol/${wl._id}`,
+                `https://sl--backend.herokuapp.com/watchlist/removeSymbol/${wl._id}`,
                 body,
                 {headers: {'x-auth-token': localStorage.getItem('auth-token')}}
             );

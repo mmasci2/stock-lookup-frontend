@@ -28,14 +28,14 @@ function App() {
             }
             
             const tokenRes = await Axios.post(
-                'http://localHost:5000/users/tokenIsValid',
+                'https://sl--backend.herokuapp.com/users/tokenIsValid',
                 null,
                 {headers: {'x-auth-token': token}}
             );
 
             if(tokenRes.data) {
                 const userRes = await Axios.get(
-                    'http://localHost:5000/users/',
+                    'https://sl--backend.herokuapp.com/users/',
                     {headers: {'x-auth-token': token}}
                 );
 
